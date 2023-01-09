@@ -4,9 +4,10 @@
 getDataFromServer();
 
 async function getDataFromServer() {
-    const res = await fetch('https://dynamic-enormous-thief.glitch.me/getdata', { method: 'GET' });
+    const res = await fetch('/getdata', { method: 'GET' });
+    // const res = await fetch('http://localhost:8080/getdata', { method: 'GET' });
     const data = await res.json(); //data is my stuff from notion api
-    //console.log(data);
+    // console.log(data);
 
     data.forEach((item) => {
         // console.log(item);
